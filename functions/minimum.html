@@ -1,0 +1,15 @@
+<script>
+	function min(...args) {
+		let minimum = null;
+		for (let num of args) {
+			if (minimum === null || num < minimum) {
+				minimum = num;
+			}
+		}
+		return minimum;
+	}
+	console.log(min(0, 10));
+	// → 0
+	console.log(min(0, -10));
+	// → -10
+</script>
