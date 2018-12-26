@@ -13,13 +13,12 @@
 		let chessBoard = '';
 		let isHash = false;
 		for (let i = 1; i < size * size; i++) {
-			if (i % size !== 0) {
-				isHash ? (chessBoard += '#') : (chessBoard += ' ');
-			} else {
-				isHash ? (chessBoard += '#\n') : (chessBoard += ' \n');
+			isHash ? (chessBoard += '#') : (chessBoard += ' ');
+			isHash = !isHash;
+			if (i % size === 0) {
+				chessBoard += '\n';
 				isHash = !isHash;
 			}
-			isHash = !isHash;
 		}
 		console.log(chessBoard);
 	}
