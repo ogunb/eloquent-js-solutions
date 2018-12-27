@@ -5,7 +5,6 @@
 		let toReturn = null;
 		for (let item in mainObj) {
 			if (typeof compObj[item] === 'object') {
-				debugger;
 				deepEqual(mainObj[item], compObj[item]);
 			} else {
 				if (mainObj[item] !== compObj[item]) return false;
