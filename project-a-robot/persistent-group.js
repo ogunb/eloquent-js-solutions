@@ -35,3 +35,7 @@ console.log(a.has('b'));
 // → false
 console.log(b.has('a'));
 // → false
+function asd() {
+  console.log(this);
+}
+asd();
